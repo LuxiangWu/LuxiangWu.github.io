@@ -1,0 +1,255 @@
+:root {
+    --background: #2A2D3E;
+    --foreground: #ffffff;
+    --muted: #9CA3AF;
+    --accent-1: #B4E4E4;
+    --accent-2: #FFB584;
+    --accent-3: #E9E5F5;
+    --card-bg: #2F3244;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: var(--background);
+    z-index: 1000;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.nav-links a {
+    color: var(--foreground);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--muted);
+}
+
+/* Hero Section */
+.hero {
+    padding: 5rem 1rem 2rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+}
+
+.hero .subtitle {
+    color: var(--muted);
+    max-width: 42rem;
+    margin: 0 auto;
+}
+
+/* About Section */
+.about {
+    padding: 3rem 1rem 5rem;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 1.875rem;
+    margin-bottom: 2rem;
+}
+
+.about p {
+    max-width: 56rem;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.125rem;
+}
+
+/* Founder Section */
+.founder {
+    background-color: var(--card-bg);
+    padding: 5rem 1rem;
+}
+
+.founder h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    margin-bottom: 3rem;
+}
+
+.founder-content {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .founder-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.founder-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.founder-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.founder-info p {
+    color: var(--muted);
+    font-size: 1.125rem;
+}
+
+/* Services Section */
+.services {
+    padding: 5rem 1rem;
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+.service-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.service-header h3 {
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    color: var(--muted);
+    font-size: 1.125rem;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--card-bg);
+    padding: 5rem 1rem;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 1.875rem;
+    margin-bottom: 3rem;
+}
+
+.contact-cards {
+    max-width: 42rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--foreground);
+    transition: background-color 0.3s;
+}
+
+a.contact-card:hover {
+    background-color: #333747;
+}
+
+.contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
